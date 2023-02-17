@@ -36,21 +36,21 @@ Open J-Runner to read/write nand (AutoGG not Supported)
 ## Wiring Installation:
 
 ### Nand Flash
-| Pico | Xbox | Xbox Component Identifier
-| ------------- | ------------- |
-| GP16  | SPI_MISO  | FAT: J1D2 Pin 4 Slim : J2C1 Pin 4 
-| GP17  | SPI_SS_N | FAT: J1D2 Pin 2 Slim: J2C1 Pin 2
-| GP18  | SPI_CLK  | FAT: J1D2 Pin 3 Slim: J2C1 Pin 3
-| GP19  |  SPI_MOSI | FAT: J1D2 Pin 1 Slim: J2C1 Pin 1
-| GP20  |  SMC_DBG_EN | FAT: J2B1 Pin 4 Slim: J2C3 pin 4
-| GP21  | SMC_RST_XDK_N  | FAT: J2B1 Pin 3 Slim: J2C3 Pin 3
+| Pico | Xbox | Xbox Component Identifier |
+| ------------- | ------------- | ---------------------------------------- |
+| GP16  | SPI_MISO  | FAT: J1D2 Pin 4 Slim : J2C1 Pin 4 |
+| GP17  | SPI_SS_N | FAT: J1D2 Pin 2 Slim: J2C1 Pin 2 |
+| GP18  | SPI_CLK  | FAT: J1D2 Pin 3 Slim: J2C1 Pin 3 |
+| GP19  |  SPI_MOSI | FAT: J1D2 Pin 1 Slim: J2C1 Pin 1 |
+| GP20  |  SMC_DBG_EN | FAT: J2B1 Pin 4 Slim: J2C3 pin 4 |
+| GP21  | SMC_RST_XDK_N  | FAT: J2B1 Pin 3 Slim: J2C3 Pin 3 |
 | GND  |  GND | ANY GROUND
 * On Xbox Motherboard there's marking for numbered pin like this
-2 * * 1
-  * *
-  * *
-  * *
-10*
+| 2 | * | * | 1 |
+| | * | * |  |
+| | * | * |  |
+| | * | * |  |
+| 10 | * | * | 9 |
 
 ### ISD12xx Audible Feedback IC for Editing Xbox Chime Sound (Slim Only, Fat doesn't have speaker)
 |  | Pico | Trinity | Corona |
