@@ -1,6 +1,6 @@
 XBOX 360 NAND flasher firmware for Raspberry Pi Pico
 
-Requirements :
+## Requirements
 Hardwares:
 - Working Xbox 360 (all types, except Winchester Motherboard)
 - Raspberry Pico (Any ROM size, firmware only 80KB, so will fit 128K ROM)
@@ -12,26 +12,27 @@ Hardwares:
 - Solder Flux
 - Alcohol IPA for Cleaning
 
-Software:
-Windows 7 or Above | Linux Distro with Kernel 4+
-C Compiler:
-LINUX
+Software
+- Windows 7 or Above | Linux Distro with Kernel 4+
+C Compiler
+LINUX:
 - GCC
 - CMAKE
 - makesure C development packages installed
-Windows
+Windows:
 - Visual Studio
+
 Compile using Visual Studio, GCC or your preferred compiler
 or
 use precompiled binary (.uf2) at BIN folder
 
 Install Firware:
-HOLD BUTTON on PICO
-KEEP HOLD then connect USB cable to your Computer
-If you do it right a new drive will appear/mounted
-Copy .uf2 firmware to the drive
-Pico will reboot for reflash
-Open J-Runner to read/write nand (AutoGG not Supported)
+- HOLD BUTTON on PICO
+- KEEP HOLD then connect USB cable to your Computer
+- If you do it right a new drive will appear/mounted
+- Copy .uf2 firmware to the drive
+- Pico will reboot for reflash
+- Open J-Runner to read/write nand (AutoGG not Supported)
 
 ## Wiring Installation:
 
