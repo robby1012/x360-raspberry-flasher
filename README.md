@@ -45,11 +45,15 @@ Open J-Runner to read/write nand (AutoGG not Supported)
 | GP20  |  SMC_DBG_EN | FAT: J2B1 Pin 4 Slim: J2C3 pin 4 |
 | GP21  | SMC_RST_XDK_N  | FAT: J2B1 Pin 3 Slim: J2C3 Pin 3 |
 | GND  |  GND | ANY GROUND
+
 * On Xbox Motherboard there's marking for numbered pin like this
+
+| Pin Number | PIN | PIN | Pin Number |
+| ---------- | --- | --- | ---------- | 
 | 2 | * | * | 1 |
-| | * | * |  |
-| | * | * |  |
-| | * | * |  |
+|  | * | * |  |
+|  | * | * |  |
+|  | * | * |  |
 | 10 | * | * | 9 |
 
 ### ISD12xx Audible Feedback IC for Editing Xbox Chime Sound (Slim Only, Fat doesn't have speaker)
