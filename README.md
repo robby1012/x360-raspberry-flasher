@@ -1,5 +1,7 @@
 XBOX 360 NAND flasher firmware for Raspberry Pi Pico
 
+It almost 4x faster than TX JRP v2, or matrix SPI flasher since PICO running at 128Mhz by default compared 20Mhz on Matrix or 32Mhz on JRP
+
 ## Requirements
 Hardwares:
 - Working Xbox 360 (all types, except Winchester Motherboard)
@@ -13,20 +15,24 @@ Hardwares:
 - Alcohol IPA for Cleaning
 
 Software
-- Windows 7 or Above | Linux Distro with Kernel 4+
-C Compiler
+- Windows 7 or Above | Linux Distro with Kernel 3+
+- C Compiler
+
 LINUX:
 - GCC
 - CMAKE
-- makesure C development packages installed
+
+makesure C development packages installed
+
 Windows:
-- Visual Studio
+- Visual Studio with C SDK
 
 Compile using Visual Studio, GCC or your preferred compiler
 or
-use precompiled binary (.uf2) at BIN folder
 
-Install Firware:
+you can also use precompiled binary (.uf2) at BIN folder
+
+Install Firmware:
 - HOLD BUTTON on PICO
 - KEEP HOLD then connect USB cable to your Computer
 - If you do it right a new drive will appear/mounted
@@ -45,7 +51,7 @@ Install Firware:
 | GP19  |  SPI_MOSI | FAT: J1D2 Pin 1 Slim: J2C1 Pin 1 |
 | GP20  |  SMC_DBG_EN | FAT: J2B1 Pin 4 Slim: J2C3 pin 4 |
 | GP21  | SMC_RST_XDK_N  | FAT: J2B1 Pin 3 Slim: J2C3 Pin 3 |
-| GND  |  GND | ANY GROUND
+| GND  |  GND | ANY GROUND Points |
 
 * On Xbox Motherboard there's marking for numbered pin like this
 
@@ -68,12 +74,15 @@ SPI_MOSI | GP15 | FT2T5 | J2C2-B8
 
 ### EMMC Flash (Xbox 360 Corona Motherboard Only)
 | Pico | Xbox | Corona 4GB |
-| ------------- | ------------- | ------------- |
+| ------------- | ------------- | -------------------------------- |
 | GP6  | FLSH_DATA<0> | U1D1 pin 16 |
 | GP7  | FLSH_WP_N (CMD) | U1D1 pin 3 |
 | GP8  |  FLSH_CE_N (CLK) | U1D1 pin 2 |
 | GP9  |  MMC_RST_N | U1D1 pin 1 |
-| GP21  | SMC_RST_XDK_N  | Same as 16MB flash |
-| GND  |  GND | U1D1 PIN 4 | ANY GROUND on Xbox Motherboard
+| GP21  | SMC_RST_XDK_N  | J2C3 Pin 3 |
+| GND  |  GND | U1D1 PIN 4 | ANY GROUND points on Xbox Motherboard
 
-**DO NOT SOLDER ANYTHING TO THE CRYISTAL, it will shutdown SMC. Unlike 4GB reader/writer, pico need Xbox SMC to read and write NAND, 4GB reader use EMMC Controller on external board**
+**DO NOT SOLDER ANYTHING TO THE CRYISTAL OSCILATOR, it will shutdown SMC.**
+Unlike 4GB reader/writer, pico use Xbox SMC to read and write NAND, 4GB reader use EMMC Controller on external board
+
+Credits: Xbox 360 Hacking Scenes
